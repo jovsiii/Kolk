@@ -1,4 +1,6 @@
 #pragma once
+
+#include"2ndUI.h"
 using namespace System;
 using namespace System::IO;
 using namespace System::Windows::Forms;
@@ -6,26 +8,29 @@ using namespace System::Windows::Forms;
 
 public ref class Order {
     //directory for file handling
-   static String^ currentDirectory = Path::GetDirectoryName(Application::ExecutablePath);
+    static String^ currentDirectory = Path::GetDirectoryName(Application::ExecutablePath);
 
 private:
     //private members
     DataGridView^ dataGridView1;
     RichTextBox^ richTextBox1;
-    ComboBox^ comboBox1;
-    ComboBox^ comboBox2;
-    TextBox^ textBox1;
+    RadioButton^ radioButtonSmall;
+    RadioButton^ radioButtonLarge;
+    TextBox^ Quantity;
+    String^ productName;
 
 public:
     //constructor
-    Order(DataGridView^ dgv, RichTextBox^ rtb, ComboBox^ cb1, ComboBox^ cb2, TextBox^ tb) {
+    Order(DataGridView^ dgv, RichTextBox^ rtb, RadioButton^ rbSmall, RadioButton^ rbLarge,String^prName, TextBox ^quanity) {
         dataGridView1 = dgv;
         richTextBox1 = rtb;
-        comboBox1 = cb1;
-        comboBox2 = cb2;
-        textBox1 = tb;
+        radioButtonSmall = rbSmall;
+        productName = prName;
+        radioButtonLarge = rbLarge;
+        Quantity = quanity;
+
     }
-    void Reciept() {    
+    void Reciept() {
         //clears the rich text box
         richTextBox1->Clear();
         //Get time and date for reciept
@@ -46,7 +51,7 @@ public:
         //individual paddings of the columns
         array<int>^ contentPadding = gcnew array<int>{5, 5, 8, 5};
         //individual paddings for the items
-        array<int>^  barpadding= gcnew array<int>{10, 10, 5, 5}; 
+        array<int>^ barpadding = gcnew array<int>{10, 10, 5, 5};
         //interates the head of the column for their name
         for (int i = 0; i < dataGridView1->Columns->Count; ++i) {
             //prints the name of the column
@@ -82,7 +87,7 @@ public:
         //displays total
         richTextBox1->AppendText("===================================================================" + Environment::NewLine);
         richTextBox1->AppendText(String::Format("                                                TOTAL: Php. {0}", total + ".00") + Environment::NewLine);
-     
+
     }
 
     void saveToText() {
@@ -102,74 +107,55 @@ public:
         }
     }
 
-    void fillCombobox() {
-        //clears the component
-        comboBox1->Items->Clear();
-       //file used
-        String^ fileName = "Menu.txt";
-        //directory
-        String^ filePath = Path::Combine(currentDirectory, fileName);
 
-        try {
-            //initialization of the file reader
-            StreamReader^ file = gcnew StreamReader(filePath);
-            //varaible that stores the text
-            String^ line;
-            //read the file and put
-            while ((line = file->ReadLine()) != nullptr) {
-                //adds the texts to the combobox
-                comboBox1->Items->Add(line);
+    void BuildOrder(String^ ProductName) {
+        int quantity = 0;
+        double price = 0.0;
+
+        // Checks if the input of the user is valid 
+        if (radioButtonSmall->Checked || radioButtonLarge->Checked) {
+            array<Object^>^ rowValues = gcnew array<Object^>(dataGridView1->Columns->Count);
+            // Stores the values 
+            rowValues[0] = ProductName;  
+
+            if (radioButtonSmall->Checked) {
+                price = 100.0;  // Set the price for small
             }
-            //closes the file
-            file->Close();
-        }
-        catch (IOException^ ex) {
-            MessageBox::Show("Error: " + ex->Message);
-        }
+            else if (radioButtonLarge->Checked) {
+                price = 120.0;  // Set the price for large
+            }
 
-    }
+            if (Int32::TryParse(Quantity->Text, quantity) && quantity < 99) {
+                rowValues[1] = price;  // Assign the selected price directly
+                rowValues[2] = quantity;  // Assign the entered quantity
 
-    void buildOrder() {
-        //checks if the  input of the user is valid 
-        if (comboBox1->SelectedItem != nullptr && comboBox2->SelectedItem != nullptr && !String::IsNullOrEmpty(textBox1->Text)) {
-            //stores the converted text to int
-            int numericValue;
-            //checks if the texts is valid or the int is greater than 99
-            if (Int32::TryParse(textBox1->Text, numericValue) && numericValue < 99) {
-                array<Object^>^ rowValues = gcnew array<Object^>(dataGridView1->Columns->Count);
-                //stores the values 
-                rowValues[0] = comboBox1->SelectedItem;
-                rowValues[1] = comboBox2->SelectedItem;
-                rowValues[2] = numericValue;
+                // Computes for total
+                double total = price * quantity;
+                // Stores the total 
+                rowValues[3] = total;
 
-                // total by multiplying Price and Quantity
-                double price, quantity;
-                //converts the combobox and textbox values to double and checks if their values are valid
-                if (Double::TryParse(comboBox2->SelectedItem->ToString(), price) &&
-                    Double::TryParse(textBox1->Text, quantity)) {
-                    //computes for total
-                    double total = price * quantity;
-                    //stores the total 
-                    rowValues[3] = total;
-                    //adds all the values to the datagrid view
-                    dataGridView1->Rows->Add(rowValues);
-                    //resets the components
-                    comboBox1->SelectedIndex = -1;
-                    comboBox2->SelectedIndex = -1;
-                    textBox1->Text = "";
-                }
+                // Adds all the values to the datagrid view
+                dataGridView1->Rows->Add(rowValues);
+
+                // Reset components
+                radioButtonSmall->Checked = false;
+                radioButtonLarge->Checked = false;
+                Quantity->Text = "";
+                // Add additional components to reset if needed
             }
             else {
-                //message box for user error
-                MessageBox::Show("Please enter a valid number (less than 99) in the TextBox.");
+                // Message box for quantity error
+                MessageBox::Show("Please enter a valid quantity (less than 99).");
             }
         }
         else {
-            //message box for user error
-            MessageBox::Show("Please select an item from both ComboBoxes and fill the TextBox.");
+            // Message box for size error
+            MessageBox::Show("Please select a size from the radio buttons.");
         }
-
     }
+
+
+
 
 
 
@@ -185,7 +171,5 @@ public:
             //message box for user error
             MessageBox::Show("Please select a row to remove.");
         }
-
     }
 };
-

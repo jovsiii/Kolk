@@ -126,12 +126,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\Assets\Bunifu_UI_v1.52.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\PrivateAssemblies\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -139,37 +133,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="MenuCC.cpp" />
-    <ClCompile Include="MenuEB.cpp" />
-    <ClCompile Include="Menufc.cpp" />
-    <ClCompile Include="Menus.cpp" />
-    <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="2ndUI.cpp" />
+    <ClCompile Include="newpanels.cpp" />
     <ClCompile Include="OnBoarding.cpp" />
     <ClCompile Include="Program.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="2ndUI.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Custom.h" />
     <ClInclude Include="Filehandling.h" />
-    <ClInclude Include="Game.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MenuCC.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MenuEB.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="Menufc.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Menus.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MyForm1.h">
+    <ClInclude Include="newpanels.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="OnBoarding.h">
@@ -178,29 +156,14 @@
     <ClInclude Include="recieptManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Game.resx">
-      <DependentUpon>Game.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuCC.resx">
-      <DependentUpon>MenuCC.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuEB.resx">
-      <DependentUpon>MenuEB.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MenuFC.resx">
-      <DependentUpon>Menufc.h</DependentUpon>
+    <EmbeddedResource Include="2ndUI.resx">
+      <DependentUpon>2ndUI.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menus.resx">
       <DependentUpon>Menus.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.aa.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyForm1.resx">
-      <DependentUpon>MyForm1.h</DependentUpon>
+    <EmbeddedResource Include="newpanels.resx">
+      <DependentUpon>newpanels.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OnBoarding.resx">
       <DependentUpon>OnBoarding.h</DependentUpon>

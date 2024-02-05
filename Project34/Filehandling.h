@@ -1,6 +1,6 @@
 #pragma once
 #include"Menus.h"
-
+#include"2ndUI.h"
 using namespace System;
 using namespace System::IO;
 using namespace System::Windows::Forms;

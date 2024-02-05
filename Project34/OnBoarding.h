@@ -34,6 +34,10 @@ namespace Project34 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Label^ pahuway;
+
+	protected:
 
 	protected:
 
@@ -51,16 +55,38 @@ namespace Project34 {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(OnBoarding::typeid));
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->pahuway = (gcnew System::Windows::Forms::Label());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
+			// 
+			// pictureBox1
+			// 
+			resources->ApplyResources(this->pictureBox1, L"pictureBox1");
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->TabStop = false;
+			// 
+			// pahuway
+			// 
+			resources->ApplyResources(this->pahuway, L"pahuway");
+			this->pahuway->BackColor = System::Drawing::Color::Transparent;
+			this->pahuway->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->pahuway->Name = L"pahuway";
 			// 
 			// OnBoarding
 			// 
 			resources->ApplyResources(this, L"$this");
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->Controls->Add(this->pahuway);
+			this->Controls->Add(this->pictureBox1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"OnBoarding";
 			this->Load += gcnew System::EventHandler(this, &OnBoarding::OnBoarding_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
