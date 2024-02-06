@@ -177,29 +177,69 @@ private: System::Windows::Forms::TextBox^ tbUsername;
 private: System::Windows::Forms::TextBox^ tbPassword;
 private: System::Windows::Forms::Panel^ LOGINPANEL;
 private: System::Windows::Forms::Label^ label6;
-private: System::Windows::Forms::Label^ label13;
-private: System::Windows::Forms::Label^ lblUser;
-private: System::Windows::Forms::TextBox^ txtboxUser;
+
+
+
 private: System::Windows::Forms::Label^ Signup;
-private: System::Windows::Forms::Label^ lblPass;
-private: System::Windows::Forms::Button^ btnSignin;
-private: System::Windows::Forms::TextBox^ txtBoxPass;
+
+
+
 private: System::Windows::Forms::Label^ label14;
 private: System::Windows::Forms::Label^ label15;
 private: System::Windows::Forms::Label^ label16;
 private: System::Windows::Forms::Label^ loginback;
 private: System::Windows::Forms::Panel^ CMPanel;
-private: System::Windows::Forms::PictureBox^ pictureBox2;
-private: System::Windows::Forms::Panel^ panel11;
-private: System::Windows::Forms::PictureBox^ pictureBox5;
-private: System::Windows::Forms::Panel^ panel13;
+
+
+
+
 private: System::Windows::Forms::Button^ button2;
 private: System::Windows::Forms::Panel^ CPPanel;
-private: System::Windows::Forms::PictureBox^ pictureBox19;
+
 private: System::Windows::Forms::Panel^ panel14;
 private: System::Windows::Forms::PictureBox^ pictureBox32;
-private: System::Windows::Forms::Panel^ panel15;
+
 private: System::Windows::Forms::Button^ button3;
+private: System::Windows::Forms::Panel^ IMPanel;
+
+
+private: System::Windows::Forms::Panel^ panel16;
+private: System::Windows::Forms::PictureBox^ pictureBox34;
+
+private: System::Windows::Forms::Button^ button4;
+private: System::Windows::Forms::PictureBox^ pictureBox35;
+private: System::Windows::Forms::PictureBox^ pictureBox36;
+private: System::Windows::Forms::Panel^ panel2;
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::PictureBox^ PBlogo;
+private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::PictureBox^ pictureBox37;
+private: System::Windows::Forms::Button^ btnSignin;
+private: System::Windows::Forms::TextBox^ txtboxUser;
+private: System::Windows::Forms::TextBox^ txtBoxPass;
+private: System::Windows::Forms::Panel^ panel11;
+private: System::Windows::Forms::PictureBox^ pictureBox2;
+private: System::Windows::Forms::PictureBox^ pictureBox5;
+private: System::Windows::Forms::PictureBox^ pictureBox72;
+private: System::Windows::Forms::PictureBox^ pictureBox33;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::PictureBox^ pictureBox73;
+private: System::Windows::Forms::PictureBox^ pictureBox74;
+private: System::Windows::Forms::PictureBox^ pictureBox19;
+private: System::Windows::Forms::PictureBox^ pictureBox75;
+private: System::Windows::Forms::Panel^ panelCO;
+private: System::Windows::Forms::Panel^ panel15;
+private: System::Windows::Forms::Panel^ panel13;
+private: System::Windows::Forms::PictureBox^ pictureBox77;
+private: System::Windows::Forms::PictureBox^ pictureBox76;
+private: System::Windows::Forms::Button^ button5;
+private: System::Windows::Forms::PictureBox^ pictureBox78;
+private: System::Windows::Forms::PictureBox^ pictureBox79;
+
+
+
 
 
 private: System::Windows::Forms::Panel^ COFFEEFRAPPES;
@@ -357,7 +397,7 @@ private: System::ComponentModel::IContainer^ components;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Menus::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->printDocument1 = (gcnew System::Drawing::Printing::PrintDocument());
 			this->printPreviewDialog1 = (gcnew System::Windows::Forms::PrintPreviewDialog());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -510,28 +550,50 @@ private: System::ComponentModel::IContainer^ components;
 			this->tbUsername = (gcnew System::Windows::Forms::TextBox());
 			this->tbPassword = (gcnew System::Windows::Forms::TextBox());
 			this->LOGINPANEL = (gcnew System::Windows::Forms::Panel());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->lblUser = (gcnew System::Windows::Forms::Label());
-			this->txtboxUser = (gcnew System::Windows::Forms::TextBox());
-			this->Signup = (gcnew System::Windows::Forms::Label());
-			this->lblPass = (gcnew System::Windows::Forms::Label());
 			this->btnSignin = (gcnew System::Windows::Forms::Button());
+			this->txtboxUser = (gcnew System::Windows::Forms::TextBox());
 			this->txtBoxPass = (gcnew System::Windows::Forms::TextBox());
+			this->pictureBox37 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox35 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox36 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->PBlogo = (gcnew System::Windows::Forms::PictureBox());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->Signup = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->CMPanel = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel11 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-			this->panel13 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox72 = (gcnew System::Windows::Forms::PictureBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->CPPanel = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox19 = (gcnew System::Windows::Forms::PictureBox());
 			this->panel14 = (gcnew System::Windows::Forms::Panel());
 			this->pictureBox32 = (gcnew System::Windows::Forms::PictureBox());
-			this->panel15 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox75 = (gcnew System::Windows::Forms::PictureBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->IMPanel = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox33 = (gcnew System::Windows::Forms::PictureBox());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox73 = (gcnew System::Windows::Forms::PictureBox());
+			this->panel16 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox34 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox74 = (gcnew System::Windows::Forms::PictureBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->panelCO = (gcnew System::Windows::Forms::Panel());
+			this->panel15 = (gcnew System::Windows::Forms::Panel());
+			this->panel13 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox77 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox76 = (gcnew System::Windows::Forms::PictureBox());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox78 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox79 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panelCart->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox97))->BeginInit();
@@ -625,14 +687,33 @@ private: System::ComponentModel::IContainer^ components;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->REGISTER->SuspendLayout();
 			this->LOGINPANEL->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox37))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox35))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox36))->BeginInit();
+			this->panel2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PBlogo))->BeginInit();
 			this->CMPanel->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->panel11->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox72))->BeginInit();
 			this->CPPanel->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->BeginInit();
 			this->panel14->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox32))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox75))->BeginInit();
+			this->IMPanel->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox33))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox73))->BeginInit();
+			this->panel16->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox34))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox74))->BeginInit();
+			this->panelCO->SuspendLayout();
+			this->panel15->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox77))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox76))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox78))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox79))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// printDocument1
@@ -656,15 +737,15 @@ private: System::ComponentModel::IContainer^ components;
 			this->dataGridView1->AllowUserToDeleteRows = false;
 			this->dataGridView1->AllowUserToResizeColumns = false;
 			this->dataGridView1->AllowUserToResizeRows = false;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)));
-			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			this->dataGridView1->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(206)), static_cast<System::Int32>(static_cast<System::Byte>(163)));
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(213)), static_cast<System::Int32>(static_cast<System::Byte>(206)),
 				static_cast<System::Int32>(static_cast<System::Byte>(163)));
-			this->dataGridView1->Location = System::Drawing::Point(21, 213);
+			this->dataGridView1->Location = System::Drawing::Point(740, 857);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
@@ -723,7 +804,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelCart->Controls->Add(this->pictureBox98);
 			this->panelCart->Controls->Add(this->pictureBox100);
 			this->panelCart->Controls->Add(this->label37);
-			this->panelCart->Controls->Add(this->dataGridView1);
 			this->panelCart->Controls->Add(this->pictureBox101);
 			this->panelCart->Location = System::Drawing::Point(1718, 41);
 			this->panelCart->Name = L"panelCart";
@@ -946,6 +1026,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->pnlBS3->Name = L"pnlBS3";
 			this->pnlBS3->Size = System::Drawing::Size(374, 100);
 			this->pnlBS3->TabIndex = 33;
+			this->pnlBS3->Click += gcnew System::EventHandler(this, &Menus::pnlBS3_Click);
 			// 
 			// panel9
 			// 
@@ -1022,6 +1103,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->pnlBS2->Name = L"pnlBS2";
 			this->pnlBS2->Size = System::Drawing::Size(374, 100);
 			this->pnlBS2->TabIndex = 35;
+			this->pnlBS2->Click += gcnew System::EventHandler(this, &Menus::pnlBS2_Click);
 			// 
 			// pictureBox15
 			// 
@@ -1174,7 +1256,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->HOME->Controls->Add(this->pictureBox13);
 			this->HOME->Controls->Add(this->PBcaffeLatte);
 			this->HOME->Controls->Add(this->label7);
-			this->HOME->Location = System::Drawing::Point(312, 31);
+			this->HOME->Location = System::Drawing::Point(791, 9);
 			this->HOME->Name = L"HOME";
 			this->HOME->Size = System::Drawing::Size(414, 820);
 			this->HOME->TabIndex = 36;
@@ -1366,7 +1448,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->HOTDRINNKS->Controls->Add(this->label20);
 			this->HOTDRINNKS->Controls->Add(this->label22);
 			this->HOTDRINNKS->Controls->Add(this->pictureBox41);
-			this->HOTDRINNKS->Location = System::Drawing::Point(353, 14);
+			this->HOTDRINNKS->Location = System::Drawing::Point(498, 21);
 			this->HOTDRINNKS->Name = L"HOTDRINNKS";
 			this->HOTDRINNKS->Size = System::Drawing::Size(414, 820);
 			this->HOTDRINNKS->TabIndex = 40;
@@ -1594,7 +1676,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->COLDDRINKS->Controls->Add(this->label1);
 			this->COLDDRINKS->Controls->Add(this->label19);
 			this->COLDDRINKS->Controls->Add(this->pictureBox53);
-			this->COLDDRINKS->Location = System::Drawing::Point(353, 13);
+			this->COLDDRINKS->Location = System::Drawing::Point(498, 20);
 			this->COLDDRINKS->Name = L"COLDDRINKS";
 			this->COLDDRINKS->Size = System::Drawing::Size(414, 820);
 			this->COLDDRINKS->TabIndex = 41;
@@ -1730,6 +1812,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->pictureBox63->Size = System::Drawing::Size(176, 269);
 			this->pictureBox63->TabIndex = 52;
 			this->pictureBox63->TabStop = false;
+			this->pictureBox63->Click += gcnew System::EventHandler(this, &Menus::pictureBox63_Click);
 			// 
 			// pictureBox62
 			// 
@@ -1739,6 +1822,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->pictureBox62->Size = System::Drawing::Size(176, 269);
 			this->pictureBox62->TabIndex = 53;
 			this->pictureBox62->TabStop = false;
+			this->pictureBox62->Click += gcnew System::EventHandler(this, &Menus::pictureBox62_Click);
 			// 
 			// pictureBox61
 			// 
@@ -1748,6 +1832,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->pictureBox61->Size = System::Drawing::Size(176, 269);
 			this->pictureBox61->TabIndex = 54;
 			this->pictureBox61->TabStop = false;
+			this->pictureBox61->Click += gcnew System::EventHandler(this, &Menus::pictureBox61_Click);
 			// 
 			// pictureBox60
 			// 
@@ -1843,7 +1928,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->COFFEEFRAPPES->Controls->Add(this->pictureBox68);
 			this->COFFEEFRAPPES->Controls->Add(this->label29);
 			this->COFFEEFRAPPES->Controls->Add(this->pictureBox69);
-			this->COFFEEFRAPPES->Location = System::Drawing::Point(354, 12);
+			this->COFFEEFRAPPES->Location = System::Drawing::Point(444, 12);
 			this->COFFEEFRAPPES->Name = L"COFFEEFRAPPES";
 			this->COFFEEFRAPPES->Size = System::Drawing::Size(414, 820);
 			this->COFFEEFRAPPES->TabIndex = 42;
@@ -1924,7 +2009,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->PanelCap->Controls->Add(this->pictureBox17);
 			this->PanelCap->Controls->Add(this->panel12);
 			this->PanelCap->Controls->Add(this->cafelattebtn);
-			this->PanelCap->Location = System::Drawing::Point(1210, 35);
+			this->PanelCap->Location = System::Drawing::Point(1634, 9);
 			this->PanelCap->Name = L"PanelCap";
 			this->PanelCap->Size = System::Drawing::Size(436, 521);
 			this->PanelCap->TabIndex = 56;
@@ -2154,7 +2239,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->REGISTER->Controls->Add(this->tbConfirm);
 			this->REGISTER->Controls->Add(this->tbUsername);
 			this->REGISTER->Controls->Add(this->tbPassword);
-			this->REGISTER->Location = System::Drawing::Point(3, 447);
+			this->REGISTER->Location = System::Drawing::Point(12, 883);
 			this->REGISTER->Name = L"REGISTER";
 			this->REGISTER->Size = System::Drawing::Size(323, 505);
 			this->REGISTER->TabIndex = 60;
@@ -2303,98 +2388,28 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// LOGINPANEL
 			// 
-			this->LOGINPANEL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(203)));
-			this->LOGINPANEL->Controls->Add(this->label6);
-			this->LOGINPANEL->Controls->Add(this->label13);
-			this->LOGINPANEL->Controls->Add(this->lblUser);
-			this->LOGINPANEL->Controls->Add(this->txtboxUser);
-			this->LOGINPANEL->Controls->Add(this->Signup);
-			this->LOGINPANEL->Controls->Add(this->lblPass);
+			this->LOGINPANEL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
 			this->LOGINPANEL->Controls->Add(this->btnSignin);
+			this->LOGINPANEL->Controls->Add(this->txtboxUser);
 			this->LOGINPANEL->Controls->Add(this->txtBoxPass);
-			this->LOGINPANEL->Location = System::Drawing::Point(21, 36);
+			this->LOGINPANEL->Controls->Add(this->pictureBox37);
+			this->LOGINPANEL->Controls->Add(this->pictureBox35);
+			this->LOGINPANEL->Controls->Add(this->pictureBox36);
+			this->LOGINPANEL->Controls->Add(this->panel2);
+			this->LOGINPANEL->Controls->Add(this->label23);
+			this->LOGINPANEL->Controls->Add(this->label24);
+			this->LOGINPANEL->Controls->Add(this->label6);
+			this->LOGINPANEL->Controls->Add(this->Signup);
+			this->LOGINPANEL->Location = System::Drawing::Point(3, 12);
 			this->LOGINPANEL->Name = L"LOGINPANEL";
-			this->LOGINPANEL->Size = System::Drawing::Size(285, 390);
+			this->LOGINPANEL->Size = System::Drawing::Size(414, 820);
 			this->LOGINPANEL->TabIndex = 59;
-			// 
-			// label6
-			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Montserrat", 9.749999F, System::Drawing::FontStyle::Bold));
-			this->label6->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->label6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->label6->Location = System::Drawing::Point(101, 331);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(81, 18);
-			this->label6->TabIndex = 17;
-			this->label6->Text = L"New user\?";
-			// 
-			// label13
-			// 
-			this->label13->BackColor = System::Drawing::Color::Transparent;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Montserrat", 20.25F, System::Drawing::FontStyle::Bold));
-			this->label13->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->label13->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->label13->Location = System::Drawing::Point(79, 47);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(128, 38);
-			this->label13->TabIndex = 8;
-			this->label13->Text = L"Log In";
-			// 
-			// lblUser
-			// 
-			this->lblUser->BackColor = System::Drawing::Color::Transparent;
-			this->lblUser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold));
-			this->lblUser->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->lblUser->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->lblUser->Location = System::Drawing::Point(12, 111);
-			this->lblUser->Name = L"lblUser";
-			this->lblUser->Size = System::Drawing::Size(96, 20);
-			this->lblUser->TabIndex = 1;
-			this->lblUser->Text = L"USERNAME";
-			// 
-			// txtboxUser
-			// 
-			this->txtboxUser->BackColor = System::Drawing::SystemColors::Control;
-			this->txtboxUser->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txtboxUser->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold));
-			this->txtboxUser->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->txtboxUser->Location = System::Drawing::Point(15, 134);
-			this->txtboxUser->Name = L"txtboxUser";
-			this->txtboxUser->Size = System::Drawing::Size(252, 22);
-			this->txtboxUser->TabIndex = 3;
-			// 
-			// Signup
-			// 
-			this->Signup->AutoSize = true;
-			this->Signup->BackColor = System::Drawing::Color::Transparent;
-			this->Signup->Font = (gcnew System::Drawing::Font(L"Montserrat", 8.249999F));
-			this->Signup->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->Signup->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->Signup->Location = System::Drawing::Point(101, 349);
-			this->Signup->Name = L"Signup";
-			this->Signup->Size = System::Drawing::Size(74, 15);
-			this->Signup->TabIndex = 6;
-			this->Signup->Text = L"CLICK HERE";
-			this->Signup->Click += gcnew System::EventHandler(this, &Menus::Signup_Click);
-			// 
-			// lblPass
-			// 
-			this->lblPass->BackColor = System::Drawing::Color::Transparent;
-			this->lblPass->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold));
-			this->lblPass->ForeColor = System::Drawing::SystemColors::Desktop;
-			this->lblPass->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->lblPass->Location = System::Drawing::Point(12, 176);
-			this->lblPass->Name = L"lblPass";
-			this->lblPass->Size = System::Drawing::Size(96, 17);
-			this->lblPass->TabIndex = 2;
-			this->lblPass->Text = L"PASSWORD";
 			// 
 			// btnSignin
 			// 
-			this->btnSignin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(213)), static_cast<System::Int32>(static_cast<System::Byte>(206)),
-				static_cast<System::Int32>(static_cast<System::Byte>(163)));
+			this->btnSignin->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(246)), static_cast<System::Int32>(static_cast<System::Byte>(164)),
+				static_cast<System::Int32>(static_cast<System::Byte>(83)));
 			this->btnSignin->FlatAppearance->BorderColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(206)), static_cast<System::Int32>(static_cast<System::Byte>(163)));
 			this->btnSignin->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(60)),
@@ -2405,25 +2420,175 @@ private: System::ComponentModel::IContainer^ components;
 			this->btnSignin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold));
 			this->btnSignin->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->btnSignin->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->btnSignin->Location = System::Drawing::Point(185, 236);
+			this->btnSignin->Location = System::Drawing::Point(72, 627);
 			this->btnSignin->Name = L"btnSignin";
-			this->btnSignin->Size = System::Drawing::Size(82, 45);
-			this->btnSignin->TabIndex = 5;
+			this->btnSignin->Size = System::Drawing::Size(240, 40);
+			this->btnSignin->TabIndex = 32;
 			this->btnSignin->Text = L"Sign in";
 			this->btnSignin->UseVisualStyleBackColor = false;
-			this->btnSignin->Click += gcnew System::EventHandler(this, &Menus::btnSignin_Click);
+			this->btnSignin->Click += gcnew System::EventHandler(this, &Menus::btnSignin_Click_1);
+			// 
+			// txtboxUser
+			// 
+			this->txtboxUser->BackColor = System::Drawing::SystemColors::Control;
+			this->txtboxUser->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txtboxUser->Font = (gcnew System::Drawing::Font(L"Calibri", 14, System::Drawing::FontStyle::Bold));
+			this->txtboxUser->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->txtboxUser->Location = System::Drawing::Point(46, 467);
+			this->txtboxUser->Name = L"txtboxUser";
+			this->txtboxUser->Size = System::Drawing::Size(302, 30);
+			this->txtboxUser->TabIndex = 30;
 			// 
 			// txtBoxPass
 			// 
 			this->txtBoxPass->BackColor = System::Drawing::SystemColors::Control;
 			this->txtBoxPass->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txtBoxPass->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Bold));
+			this->txtBoxPass->Font = (gcnew System::Drawing::Font(L"Calibri", 14, System::Drawing::FontStyle::Bold));
 			this->txtBoxPass->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->txtBoxPass->Location = System::Drawing::Point(15, 196);
+			this->txtBoxPass->Location = System::Drawing::Point(46, 536);
 			this->txtBoxPass->Name = L"txtBoxPass";
 			this->txtBoxPass->PasswordChar = '•';
-			this->txtBoxPass->Size = System::Drawing::Size(252, 22);
-			this->txtBoxPass->TabIndex = 4;
+			this->txtBoxPass->Size = System::Drawing::Size(302, 30);
+			this->txtBoxPass->TabIndex = 31;
+			// 
+			// pictureBox37
+			// 
+			this->pictureBox37->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox37.Image")));
+			this->pictureBox37->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->pictureBox37->Location = System::Drawing::Point(46, 712);
+			this->pictureBox37->Name = L"pictureBox37";
+			this->pictureBox37->Size = System::Drawing::Size(334, 10);
+			this->pictureBox37->TabIndex = 29;
+			this->pictureBox37->TabStop = false;
+			// 
+			// pictureBox35
+			// 
+			this->pictureBox35->BackColor = System::Drawing::SystemColors::Control;
+			this->pictureBox35->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox35.Image")));
+			this->pictureBox35->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->pictureBox35->Location = System::Drawing::Point(514, 607);
+			this->pictureBox35->Name = L"pictureBox35";
+			this->pictureBox35->Size = System::Drawing::Size(16, 18);
+			this->pictureBox35->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
+			this->pictureBox35->TabIndex = 28;
+			this->pictureBox35->TabStop = false;
+			// 
+			// pictureBox36
+			// 
+			this->pictureBox36->BackColor = System::Drawing::SystemColors::Control;
+			this->pictureBox36->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox36.Image")));
+			this->pictureBox36->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->pictureBox36->Location = System::Drawing::Point(514, 530);
+			this->pictureBox36->Name = L"pictureBox36";
+			this->pictureBox36->Size = System::Drawing::Size(16, 18);
+			this->pictureBox36->SizeMode = System::Windows::Forms::PictureBoxSizeMode::CenterImage;
+			this->pictureBox36->TabIndex = 26;
+			this->pictureBox36->TabStop = false;
+			// 
+			// panel2
+			// 
+			this->panel2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel2.BackgroundImage")));
+			this->panel2->Controls->Add(this->label17);
+			this->panel2->Controls->Add(this->PBlogo);
+			this->panel2->Controls->Add(this->label18);
+			this->panel2->Location = System::Drawing::Point(1, 0);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(417, 391);
+			this->panel2->TabIndex = 27;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->BackColor = System::Drawing::Color::Transparent;
+			this->label17->Font = (gcnew System::Drawing::Font(L"Calibri", 11, System::Drawing::FontStyle::Bold));
+			this->label17->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(200)),
+				static_cast<System::Int32>(static_cast<System::Byte>(162)));
+			this->label17->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label17->Location = System::Drawing::Point(111, 359);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(151, 18);
+			this->label17->TabIndex = 22;
+			this->label17->Text = L"Login into your account";
+			// 
+			// PBlogo
+			// 
+			this->PBlogo->BackColor = System::Drawing::Color::Transparent;
+			this->PBlogo->ErrorImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"PBlogo.ErrorImage")));
+			this->PBlogo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"PBlogo.Image")));
+			this->PBlogo->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->PBlogo->Location = System::Drawing::Point(147, 116);
+			this->PBlogo->Name = L"PBlogo";
+			this->PBlogo->Size = System::Drawing::Size(105, 104);
+			this->PBlogo->TabIndex = 20;
+			this->PBlogo->TabStop = false;
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->BackColor = System::Drawing::Color::Transparent;
+			this->label18->Font = (gcnew System::Drawing::Font(L"Calibri", 25, System::Drawing::FontStyle::Bold));
+			this->label18->ForeColor = System::Drawing::Color::White;
+			this->label18->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label18->Location = System::Drawing::Point(140, 314);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(92, 41);
+			this->label18->TabIndex = 21;
+			this->label18->Text = L"Login";
+			// 
+			// label23
+			// 
+			this->label23->BackColor = System::Drawing::Color::Transparent;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Calibri", 11, System::Drawing::FontStyle::Bold));
+			this->label23->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(200)),
+				static_cast<System::Int32>(static_cast<System::Byte>(162)));
+			this->label23->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label23->Location = System::Drawing::Point(43, 444);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(96, 20);
+			this->label23->TabIndex = 24;
+			this->label23->Text = L"Username";
+			// 
+			// label24
+			// 
+			this->label24->BackColor = System::Drawing::Color::Transparent;
+			this->label24->Font = (gcnew System::Drawing::Font(L"Calibri", 11, System::Drawing::FontStyle::Bold));
+			this->label24->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(200)),
+				static_cast<System::Int32>(static_cast<System::Byte>(162)));
+			this->label24->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label24->Location = System::Drawing::Point(45, 517);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(96, 17);
+			this->label24->TabIndex = 25;
+			this->label24->Text = L"Password";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Font = (gcnew System::Drawing::Font(L"Calibri", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+			this->label6->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->label6->Location = System::Drawing::Point(145, 745);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(66, 15);
+			this->label6->TabIndex = 17;
+			this->label6->Text = L"New user\?";
+			// 
+			// Signup
+			// 
+			this->Signup->AutoSize = true;
+			this->Signup->BackColor = System::Drawing::Color::Transparent;
+			this->Signup->Font = (gcnew System::Drawing::Font(L"Calibri", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Signup->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(200)),
+				static_cast<System::Int32>(static_cast<System::Byte>(162)));
+			this->Signup->ImeMode = System::Windows::Forms::ImeMode::NoControl;
+			this->Signup->Location = System::Drawing::Point(217, 745);
+			this->Signup->Name = L"Signup";
+			this->Signup->Size = System::Drawing::Size(52, 15);
+			this->Signup->TabIndex = 6;
+			this->Signup->Text = L"Register";
+			this->Signup->Click += gcnew System::EventHandler(this, &Menus::Signup_Click);
 			// 
 			// label14
 			// 
@@ -2449,33 +2614,34 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->CMPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
 				static_cast<System::Int32>(static_cast<System::Byte>(36)));
-			this->CMPanel->Controls->Add(this->pictureBox2);
 			this->CMPanel->Controls->Add(this->panel11);
+			this->CMPanel->Controls->Add(this->pictureBox72);
 			this->CMPanel->Controls->Add(this->button2);
-			this->CMPanel->Location = System::Drawing::Point(835, 49);
+			this->CMPanel->Location = System::Drawing::Point(1680, 12);
 			this->CMPanel->Name = L"CMPanel";
 			this->CMPanel->Size = System::Drawing::Size(436, 521);
 			this->CMPanel->TabIndex = 61;
-			// 
-			// pictureBox2
-			// 
-			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
-			this->pictureBox2->Location = System::Drawing::Point(37, 189);
-			this->pictureBox2->Name = L"pictureBox2";
-			this->pictureBox2->Size = System::Drawing::Size(351, 220);
-			this->pictureBox2->TabIndex = 50;
-			this->pictureBox2->TabStop = false;
 			// 
 			// panel11
 			// 
 			this->panel11->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel11.BackgroundImage")));
 			this->panel11->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panel11->Controls->Add(this->pictureBox2);
 			this->panel11->Controls->Add(this->pictureBox5);
-			this->panel11->Controls->Add(this->panel13);
 			this->panel11->Location = System::Drawing::Point(13, -74);
 			this->panel11->Name = L"panel11";
 			this->panel11->Size = System::Drawing::Size(401, 268);
 			this->panel11->TabIndex = 45;
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(52, 104);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(299, 164);
+			this->pictureBox2->TabIndex = 12;
+			this->pictureBox2->TabStop = false;
 			// 
 			// pictureBox5
 			// 
@@ -2486,15 +2652,16 @@ private: System::ComponentModel::IContainer^ components;
 			this->pictureBox5->Size = System::Drawing::Size(28, 27);
 			this->pictureBox5->TabIndex = 10;
 			this->pictureBox5->TabStop = false;
+			this->pictureBox5->Click += gcnew System::EventHandler(this, &Menus::pictureBox5_Click_1);
 			// 
-			// panel13
+			// pictureBox72
 			// 
-			this->panel13->BackColor = System::Drawing::Color::Transparent;
-			this->panel13->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel13.BackgroundImage")));
-			this->panel13->Location = System::Drawing::Point(24, 94);
-			this->panel13->Name = L"panel13";
-			this->panel13->Size = System::Drawing::Size(351, 169);
-			this->panel13->TabIndex = 49;
+			this->pictureBox72->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox72.Image")));
+			this->pictureBox72->Location = System::Drawing::Point(66, 189);
+			this->pictureBox72->Name = L"pictureBox72";
+			this->pictureBox72->Size = System::Drawing::Size(363, 286);
+			this->pictureBox72->TabIndex = 11;
+			this->pictureBox72->TabStop = false;
 			// 
 			// button2
 			// 
@@ -2510,6 +2677,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->button2->TabIndex = 48;
 			this->button2->Text = L"Add to cart";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Menus::button2_Click_2);
 			// 
 			// CPPanel
 			// 
@@ -2518,7 +2686,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->CPPanel->Controls->Add(this->pictureBox19);
 			this->CPPanel->Controls->Add(this->panel14);
 			this->CPPanel->Controls->Add(this->button3);
-			this->CPPanel->Location = System::Drawing::Point(798, 587);
+			this->CPPanel->Location = System::Drawing::Point(1210, 36);
 			this->CPPanel->Name = L"CPPanel";
 			this->CPPanel->Size = System::Drawing::Size(436, 521);
 			this->CPPanel->TabIndex = 62;
@@ -2526,10 +2694,10 @@ private: System::ComponentModel::IContainer^ components;
 			// pictureBox19
 			// 
 			this->pictureBox19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox19.Image")));
-			this->pictureBox19->Location = System::Drawing::Point(37, 189);
+			this->pictureBox19->Location = System::Drawing::Point(38, 192);
 			this->pictureBox19->Name = L"pictureBox19";
-			this->pictureBox19->Size = System::Drawing::Size(351, 220);
-			this->pictureBox19->TabIndex = 50;
+			this->pictureBox19->Size = System::Drawing::Size(362, 281);
+			this->pictureBox19->TabIndex = 49;
 			this->pictureBox19->TabStop = false;
 			// 
 			// panel14
@@ -2537,7 +2705,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel14->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel14.BackgroundImage")));
 			this->panel14->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->panel14->Controls->Add(this->pictureBox32);
-			this->panel14->Controls->Add(this->panel15);
+			this->panel14->Controls->Add(this->pictureBox75);
 			this->panel14->Location = System::Drawing::Point(13, -74);
 			this->panel14->Name = L"panel14";
 			this->panel14->Size = System::Drawing::Size(401, 268);
@@ -2552,15 +2720,17 @@ private: System::ComponentModel::IContainer^ components;
 			this->pictureBox32->Size = System::Drawing::Size(28, 27);
 			this->pictureBox32->TabIndex = 10;
 			this->pictureBox32->TabStop = false;
+			this->pictureBox32->Click += gcnew System::EventHandler(this, &Menus::pictureBox32_Click);
 			// 
-			// panel15
+			// pictureBox75
 			// 
-			this->panel15->BackColor = System::Drawing::Color::Transparent;
-			this->panel15->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel15.BackgroundImage")));
-			this->panel15->Location = System::Drawing::Point(24, 94);
-			this->panel15->Name = L"panel15";
-			this->panel15->Size = System::Drawing::Size(351, 169);
-			this->panel15->TabIndex = 49;
+			this->pictureBox75->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox75->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox75.Image")));
+			this->pictureBox75->Location = System::Drawing::Point(24, 114);
+			this->pictureBox75->Name = L"pictureBox75";
+			this->pictureBox75->Size = System::Drawing::Size(350, 153);
+			this->pictureBox75->TabIndex = 50;
+			this->pictureBox75->TabStop = false;
 			// 
 			// button3
 			// 
@@ -2576,6 +2746,186 @@ private: System::ComponentModel::IContainer^ components;
 			this->button3->TabIndex = 48;
 			this->button3->Text = L"Add to cart";
 			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Menus::button3_Click_2);
+			// 
+			// IMPanel
+			// 
+			this->IMPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->IMPanel->Controls->Add(this->pictureBox33);
+			this->IMPanel->Controls->Add(this->label13);
+			this->IMPanel->Controls->Add(this->pictureBox73);
+			this->IMPanel->Controls->Add(this->panel16);
+			this->IMPanel->Controls->Add(this->button4);
+			this->IMPanel->Location = System::Drawing::Point(1677, 32);
+			this->IMPanel->Name = L"IMPanel";
+			this->IMPanel->Size = System::Drawing::Size(436, 521);
+			this->IMPanel->TabIndex = 63;
+			// 
+			// pictureBox33
+			// 
+			this->pictureBox33->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox33.Image")));
+			this->pictureBox33->Location = System::Drawing::Point(52, 379);
+			this->pictureBox33->Name = L"pictureBox33";
+			this->pictureBox33->Size = System::Drawing::Size(341, 63);
+			this->pictureBox33->TabIndex = 52;
+			this->pictureBox33->TabStop = false;
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Font = (gcnew System::Drawing::Font(L"Calibri", 18, System::Drawing::FontStyle::Bold));
+			this->label13->ForeColor = System::Drawing::SystemColors::Control;
+			this->label13->Location = System::Drawing::Point(161, 334);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(128, 29);
+			this->label13->TabIndex = 51;
+			this->label13->Text = L"Iced Mocha";
+			// 
+			// pictureBox73
+			// 
+			this->pictureBox73->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox73.Image")));
+			this->pictureBox73->Location = System::Drawing::Point(152, 194);
+			this->pictureBox73->Name = L"pictureBox73";
+			this->pictureBox73->Size = System::Drawing::Size(179, 169);
+			this->pictureBox73->TabIndex = 49;
+			this->pictureBox73->TabStop = false;
+			// 
+			// panel16
+			// 
+			this->panel16->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel16.BackgroundImage")));
+			this->panel16->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panel16->Controls->Add(this->pictureBox34);
+			this->panel16->Controls->Add(this->pictureBox74);
+			this->panel16->Location = System::Drawing::Point(13, -74);
+			this->panel16->Name = L"panel16";
+			this->panel16->Size = System::Drawing::Size(401, 268);
+			this->panel16->TabIndex = 45;
+			// 
+			// pictureBox34
+			// 
+			this->pictureBox34->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox34->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox34.Image")));
+			this->pictureBox34->Location = System::Drawing::Point(10, 79);
+			this->pictureBox34->Name = L"pictureBox34";
+			this->pictureBox34->Size = System::Drawing::Size(28, 27);
+			this->pictureBox34->TabIndex = 10;
+			this->pictureBox34->TabStop = false;
+			this->pictureBox34->Click += gcnew System::EventHandler(this, &Menus::pictureBox34_Click);
+			// 
+			// pictureBox74
+			// 
+			this->pictureBox74->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox74->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox74.Image")));
+			this->pictureBox74->Location = System::Drawing::Point(118, 113);
+			this->pictureBox74->Name = L"pictureBox74";
+			this->pictureBox74->Size = System::Drawing::Size(176, 155);
+			this->pictureBox74->TabIndex = 50;
+			this->pictureBox74->TabStop = false;
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(246)), static_cast<System::Int32>(static_cast<System::Byte>(164)),
+				static_cast<System::Int32>(static_cast<System::Byte>(83)));
+			this->button4->Font = (gcnew System::Drawing::Font(L"Calibri", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->button4->Location = System::Drawing::Point(94, 478);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(240, 40);
+			this->button4->TabIndex = 48;
+			this->button4->Text = L"Add to cart";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Menus::button4_Click_3);
+			// 
+			// panelCO
+			// 
+			this->panelCO->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->panelCO->Controls->Add(this->panel15);
+			this->panelCO->Controls->Add(this->pictureBox76);
+			this->panelCO->Controls->Add(this->button5);
+			this->panelCO->Controls->Add(this->pictureBox78);
+			this->panelCO->Controls->Add(this->pictureBox79);
+			this->panelCO->Location = System::Drawing::Point(1224, 6);
+			this->panelCO->Name = L"panelCO";
+			this->panelCO->Size = System::Drawing::Size(436, 521);
+			this->panelCO->TabIndex = 64;
+			// 
+			// panel15
+			// 
+			this->panel15->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel15.BackgroundImage")));
+			this->panel15->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->panel15->Controls->Add(this->panel13);
+			this->panel15->Controls->Add(this->pictureBox77);
+			this->panel15->Location = System::Drawing::Point(13, -74);
+			this->panel15->Name = L"panel15";
+			this->panel15->Size = System::Drawing::Size(401, 268);
+			this->panel15->TabIndex = 45;
+			// 
+			// panel13
+			// 
+			this->panel13->BackColor = System::Drawing::Color::Transparent;
+			this->panel13->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel13.BackgroundImage")));
+			this->panel13->Location = System::Drawing::Point(125, 109);
+			this->panel13->Name = L"panel13";
+			this->panel13->Size = System::Drawing::Size(151, 162);
+			this->panel13->TabIndex = 11;
+			// 
+			// pictureBox77
+			// 
+			this->pictureBox77->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox77->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox77.Image")));
+			this->pictureBox77->Location = System::Drawing::Point(10, 79);
+			this->pictureBox77->Name = L"pictureBox77";
+			this->pictureBox77->Size = System::Drawing::Size(28, 27);
+			this->pictureBox77->TabIndex = 10;
+			this->pictureBox77->TabStop = false;
+			this->pictureBox77->Click += gcnew System::EventHandler(this, &Menus::pictureBox77_Click);
+			// 
+			// pictureBox76
+			// 
+			this->pictureBox76->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox76.Image")));
+			this->pictureBox76->Location = System::Drawing::Point(58, 368);
+			this->pictureBox76->Name = L"pictureBox76";
+			this->pictureBox76->Size = System::Drawing::Size(326, 50);
+			this->pictureBox76->TabIndex = 14;
+			this->pictureBox76->TabStop = false;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(246)), static_cast<System::Int32>(static_cast<System::Byte>(164)),
+				static_cast<System::Int32>(static_cast<System::Byte>(83)));
+			this->button5->Font = (gcnew System::Drawing::Font(L"Calibri", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->button5->Location = System::Drawing::Point(94, 478);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(240, 40);
+			this->button5->TabIndex = 48;
+			this->button5->Text = L"Add to cart";
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Menus::button5_Click);
+			// 
+			// pictureBox78
+			// 
+			this->pictureBox78->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox78.Image")));
+			this->pictureBox78->Location = System::Drawing::Point(79, 329);
+			this->pictureBox78->Name = L"pictureBox78";
+			this->pictureBox78->Size = System::Drawing::Size(275, 50);
+			this->pictureBox78->TabIndex = 13;
+			this->pictureBox78->TabStop = false;
+			// 
+			// pictureBox79
+			// 
+			this->pictureBox79->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox79.Image")));
+			this->pictureBox79->Location = System::Drawing::Point(153, 189);
+			this->pictureBox79->Name = L"pictureBox79";
+			this->pictureBox79->Size = System::Drawing::Size(115, 148);
+			this->pictureBox79->TabIndex = 12;
+			this->pictureBox79->TabStop = false;
 			// 
 			// Menus
 			// 
@@ -2584,7 +2934,11 @@ private: System::ComponentModel::IContainer^ components;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1940, 1100);
 			this->ControlBox = false;
+			this->Controls->Add(this->panelCO);
 			this->Controls->Add(this->CPPanel);
+			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->HOME);
+			this->Controls->Add(this->IMPanel);
 			this->Controls->Add(this->CMPanel);
 			this->Controls->Add(this->PanelCap);
 			this->Controls->Add(this->REGISTER);
@@ -2599,7 +2953,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->Controls->Add(this->COLDDRINKS);
 			this->Controls->Add(this->HOTDRINNKS);
 			this->Controls->Add(this->btnPrint);
-			this->Controls->Add(this->HOME);
 			this->Controls->Add(this->richTextBox1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label4);
@@ -2710,14 +3063,35 @@ private: System::ComponentModel::IContainer^ components;
 			this->REGISTER->PerformLayout();
 			this->LOGINPANEL->ResumeLayout(false);
 			this->LOGINPANEL->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox37))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox35))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox36))->EndInit();
+			this->panel2->ResumeLayout(false);
+			this->panel2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->PBlogo))->EndInit();
 			this->CMPanel->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->panel11->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox72))->EndInit();
 			this->CPPanel->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox19))->EndInit();
 			this->panel14->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox32))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox75))->EndInit();
+			this->IMPanel->ResumeLayout(false);
+			this->IMPanel->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox33))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox73))->EndInit();
+			this->panel16->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox34))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox74))->EndInit();
+			this->panelCO->ResumeLayout(false);
+			this->panel15->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox77))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox76))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox78))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox79))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2726,7 +3100,7 @@ private: System::ComponentModel::IContainer^ components;
 
 
 public: void showPanel(System::Windows::Forms::Panel^ panelToShow) {
-	array<System::Windows::Forms::Panel^>^ allPanels = { REGISTER,HOME, HOTDRINNKS, COLDDRINKS, COFFEEFRAPPES, panelCart, panelOrder ,Panelcafelatte,panelmf,PanelCap,CMPanel,CPPanel};
+	array<System::Windows::Forms::Panel^>^ allPanels = { REGISTER,HOME, HOTDRINNKS, COLDDRINKS, COFFEEFRAPPES, panelCart, panelOrder ,Panelcafelatte,panelmf,PanelCap,CMPanel,CPPanel,IMPanel };
 
 	for each (System::Windows::Forms::Panel ^ panel in allPanels) {
 		panel->Hide();
@@ -2736,7 +3110,7 @@ public: void showPanel(System::Windows::Forms::Panel^ panelToShow) {
 }
 
 public: void showItem(System::Windows::Forms::Panel^ panelToShow) {
-	array<System::Windows::Forms::Panel^>^ allPanels = {HOME, Panelcafelatte, panelmf, panelCart,PanelCap, CMPanel,CPPanel };
+	array<System::Windows::Forms::Panel^>^ allPanels = { HOME, Panelcafelatte, panelmf, panelCart,PanelCap, CMPanel,CPPanel,IMPanel };
 
 	for each (System::Windows::Forms::Panel ^ panel in allPanels) {
 		panel->Hide();
@@ -3016,55 +3390,10 @@ private: System::Void pictureBox18_Click(System::Object^ sender, System::EventAr
 
 private: System::Void pnlBS1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	newpanels^ show = gcnew newpanels();
-
-	show->Show();
+	showPanel(CMPanel);
+	panelOrder->Show();
 }
 
-private: System::Void btnSignin_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ username = txtboxUser->Text;
-	String^ password = txtBoxPass->Text;
-	try {
-		//initializes the file reader
-		StreamReader^ file = gcnew StreamReader(filePath);
-		//stores the text
-		String^ line;
-		//default value of the login
-		bool loggedIn = false;
-		//reads all the line  
-		while ((line = file->ReadLine()) != nullptr) {
-			//seperates the username and password
-			array<String^>^ parts = line->Split(',');
-			//checks if the account exists in the file
-			if (parts->Length == 3 && parts[0]->Trim() == username && parts[1]->Trim() == password) {
-
-				loggedIn = true;
-				break;
-
-			}
-		}
-		//closes the file reader
-		file->Close();
-		//shows the menu after finding the text file
-		if (loggedIn) {
-
-			showPanel(HOME);
-			lblUsername->Text = username;
-
-		}
-		else {
-			//message box for user error
-			MessageBox::Show("Invalid username or password. Please try again.");
-
-		}
-	}
-	catch (IOException^ e) {
-		//message box for failed file reading
-		MessageBox::Show("Error accessing the file: " + e->Message);
-	}
-
-
-}
 
 
 private: System::Void Signup_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3149,6 +3478,103 @@ private: System::Void pictureBox7_Click_2(System::Object^ sender, System::EventA
 }
 private: System::Void pictureBox18_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	showPanel(HOME);
+}
+private: System::Void btnSignin_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+	String^ username = txtboxUser->Text;
+	String^ password = txtBoxPass->Text;
+	try {
+		//initializes the file reader
+		StreamReader^ file = gcnew StreamReader(filePath);
+		//stores the text
+		String^ line;
+		//default value of the login
+		bool loggedIn = false;
+		//reads all the line  
+		while ((line = file->ReadLine()) != nullptr) {
+			//seperates the username and password
+			array<String^>^ parts = line->Split(',');
+			//checks if the account exists in the file
+			if (parts->Length == 3 && parts[0]->Trim() == username && parts[1]->Trim() == password) {
+
+				loggedIn = true;
+				break;
+
+			}
+		}
+		//closes the file reader
+		file->Close();
+		//shows the menu after finding the text file
+		if (loggedIn) {
+
+			showPanel(HOME);
+			lblUsername->Text = username;
+
+		}
+		else {
+			//message box for user error
+			MessageBox::Show("Invalid username or password. Please try again.");
+
+		}
+	}
+	catch (IOException^ e) {
+		//message box for failed file reading
+		MessageBox::Show("Error accessing the file: " + e->Message);
+	}
+}
+
+private: System::Void button2_Click_2(System::Object^ sender, System::EventArgs^ e) {
+
+	Product = "Caramel latte";
+	order->BuildOrder(Product);
+}
+private: System::Void pnlBS2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	showPanel(IMPanel);
+	panelOrder->Show();
+}
+private: System::Void button4_Click_3(System::Object^ sender, System::EventArgs^ e) {
+	Product = "Iced Mocha";
+	order->BuildOrder(Product);
+}
+private: System::Void pictureBox5_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(HOME);
+}
+private: System::Void pictureBox34_Click(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(HOME);
+}
+private: System::Void button3_Click_2(System::Object^ sender, System::EventArgs^ e) {
+
+	Product = "Pumpkin Spice";
+	order->BuildOrder(Product);
+}
+private: System::Void pnlBS3_Click(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(CPPanel);
+	panelOrder->Show();
+}
+
+private: System::Void pictureBox63_Click(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(panelmf);
+	panelOrder->Show();
+}
+private: System::Void pictureBox62_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	showPanel(CPPanel);
+	panelOrder->Show();
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	Product = "Cookies and cream coffee";
+	order->BuildOrder(Product);
+}
+private: System::Void pictureBox32_Click(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(COFFEEFRAPPES);
+}
+private: System::Void pictureBox77_Click(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(COFFEEFRAPPES);
+}
+private: System::Void pictureBox61_Click(System::Object^ sender, System::EventArgs^ e) {
+	showPanel(panelCO);
+	panelOrder->Show();
 }
 };
 }
