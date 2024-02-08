@@ -1,5 +1,5 @@
 #pragma once
-#include"2ndUI.h"
+
 using namespace System::Drawing::Drawing2D;
 using namespace System;
 using namespace System::IO;

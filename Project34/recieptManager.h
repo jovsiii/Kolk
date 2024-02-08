@@ -1,6 +1,5 @@
 #pragma once
 
-#include"2ndUI.h"
 using namespace System;
 using namespace System::IO;
 using namespace System::Windows::Forms;

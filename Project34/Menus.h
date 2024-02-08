@@ -1,10 +1,9 @@
 #pragma once
 #include"Custom.h"
 #include"recieptManager.h"
-#include "2ndUI.h"
 #include"newpanels.h"
-
-
+#include <cstdlib>
+#include"Game.h"
 namespace Project34 {
 
 	using namespace System;
@@ -14,7 +13,7 @@ namespace Project34 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace Project34;
-	
+
 
 	/// <summary>
 	/// Summary for Menus
@@ -29,6 +28,12 @@ namespace Project34 {
 		 String^ filePath = Path::Combine(currentDirectory, fileName);
 		 String^ Product;
 		 int count;
+
+
+		 int pipeSpeed = 4;
+		 int gravity = 5;
+		 int score = 0;
+
 		
 
 private: System::Windows::Forms::Timer^ timer1;
@@ -163,49 +168,20 @@ private: System::Windows::Forms::RadioButton^ regular;
 private: System::Windows::Forms::Label^ label12;
 private: System::Windows::Forms::TextBox^ tbQuantity;
 private: System::Windows::Forms::Panel^ REGISTER;
-
-
-
-
-
-
-
-
-
-
-
-
 private: System::Windows::Forms::Panel^ LOGINPANEL;
 private: System::Windows::Forms::Label^ label6;
-
-
-
 private: System::Windows::Forms::Label^ Signup;
-
-
-
-
-
 private: System::Windows::Forms::Label^ label16;
 private: System::Windows::Forms::Label^ loginback;
 private: System::Windows::Forms::Panel^ CMPanel;
-
-
-
-
 private: System::Windows::Forms::Button^ button2;
 private: System::Windows::Forms::Panel^ CPPanel;
-
 private: System::Windows::Forms::Panel^ panel14;
 private: System::Windows::Forms::PictureBox^ pictureBox32;
-
 private: System::Windows::Forms::Button^ button3;
 private: System::Windows::Forms::Panel^ IMPanel;
-
-
 private: System::Windows::Forms::Panel^ panel16;
 private: System::Windows::Forms::PictureBox^ pictureBox34;
-
 private: System::Windows::Forms::Button^ button4;
 private: System::Windows::Forms::PictureBox^ pictureBox35;
 private: System::Windows::Forms::PictureBox^ pictureBox36;
@@ -248,27 +224,17 @@ private: System::Windows::Forms::Label^ label33;
 private: System::Windows::Forms::Label^ lblUser;
 private: System::Windows::Forms::Panel^ panel17;
 private: System::Windows::Forms::TextBox^ tbConfirm;
-
 private: System::Windows::Forms::Button^ btnRegister1;
 private: System::Windows::Forms::TextBox^ tbPassword;
-
-
 private: System::Windows::Forms::TextBox^ tbUsername;
-
-
 private: System::Windows::Forms::PictureBox^ pictureBox84;
 private: System::Windows::Forms::PictureBox^ pictureBox85;
 private: System::Windows::Forms::Label^ label10;
 private: System::Windows::Forms::TextBox^ tbFullname;
 private: System::Windows::Forms::Panel^ PROFILE;
-
-
 private: System::Windows::Forms::PictureBox^ pictureBox87;
 private: System::Windows::Forms::PictureBox^ pictureBox88;
 private: System::Windows::Forms::Panel^ panel19;
-
-
-
 private: System::Windows::Forms::Panel^ panel18;
 private: System::Windows::Forms::PictureBox^ pictureBox91;
 private: System::Windows::Forms::PictureBox^ pictureBox92;
@@ -277,24 +243,17 @@ private: System::Windows::Forms::PictureBox^ pictureBox94;
 private: System::Windows::Forms::PictureBox^ pictureBox95;
 private: System::Windows::Forms::Label^ label46;
 private: System::Windows::Forms::Label^ lblpassword;
-
 private: System::Windows::Forms::Label^ label44;
 private: System::Windows::Forms::Label^ lblemail;
-
 private: System::Windows::Forms::Label^ lblfullname;
-
 private: System::Windows::Forms::Label^ label34;
 private: System::Windows::Forms::Label^ label11;
-
 private: System::Windows::Forms::Panel^ panel20;
 private: System::Windows::Forms::Label^ lblname;
 private: System::Windows::Forms::Panel^ panel21;
-
 private: System::Windows::Forms::Panel^ panel22;
-
 private: System::Windows::Forms::PictureBox^ pictureBox90;
 private: System::Windows::Forms::Panel^ PanelIA;
-
 private: System::Windows::Forms::Panel^ panel24;
 private: System::Windows::Forms::Panel^ panel25;
 private: System::Windows::Forms::PictureBox^ pictureBox86;
@@ -305,41 +264,45 @@ private: System::Windows::Forms::Button^ button6;
 
 
 
+
+private: System::Windows::Forms::Timer^ gameTimer;
+private: System::Windows::Forms::Panel^ panel23;
+private: System::Windows::Forms::Panel^ panel26;
+private: System::Windows::Forms::PictureBox^ pictureBox96;
+private: System::Windows::Forms::PictureBox^ pictureBox99;
+private: System::Windows::Forms::PictureBox^ pictureBox102;
+private: System::Windows::Forms::PictureBox^ pictureBox103;
+private: System::Windows::Forms::PictureBox^ pictureBox104;
+private: System::Windows::Forms::PictureBox^ pictureBox105;
+private: System::Windows::Forms::Label^ label2;
+
+private: System::Windows::Forms::PictureBox^ pictureBox107;
+private: System::Windows::Forms::PictureBox^ pictureBox108;
+private: System::Windows::Forms::Label^ label4;
+private: System::Windows::Forms::PictureBox^ pictureBox109;
+private: System::Windows::Forms::Label^ scoretxt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 private: System::Windows::Forms::Panel^ COFFEEFRAPPES;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
+  
 	public:
 		Menus(void)
 		{
 			InitializeComponent();
 		
 			order = gcnew Order(dataGridView1, richTextBox1, regular, large, Product, tbQuantity);
-		
 			
 		REGISTER->Hide();
 
@@ -392,55 +355,7 @@ private: System::Windows::Forms::PrintPreviewDialog^ printPreviewDialog1;
 private: System::Windows::Forms::Button^ btnPrint;
 private: System::Windows::Forms::RichTextBox^ richTextBox1;
 private: System::Windows::Forms::DataGridView^ dataGridView1;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 private: System::ComponentModel::IContainer^ components;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	protected:
 
@@ -688,6 +603,21 @@ private: System::ComponentModel::IContainer^ components;
 			this->pictureBox86 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox89 = (gcnew System::Windows::Forms::PictureBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->gameTimer = (gcnew System::Windows::Forms::Timer(this->components));
+			this->panel23 = (gcnew System::Windows::Forms::Panel());
+			this->scoretxt = (gcnew System::Windows::Forms::Label());
+			this->panel26 = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox96 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox99 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox102 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox103 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox104 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox105 = (gcnew System::Windows::Forms::PictureBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox107 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox108 = (gcnew System::Windows::Forms::PictureBox());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox109 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->panelCart->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox97))->BeginInit();
@@ -830,6 +760,17 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel24->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox86))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox89))->BeginInit();
+			this->panel23->SuspendLayout();
+			this->panel26->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox96))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox99))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox102))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox103))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox104))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox105))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox107))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox108))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox109))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// printDocument1
@@ -922,7 +863,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelCart->Controls->Add(this->pictureBox100);
 			this->panelCart->Controls->Add(this->label37);
 			this->panelCart->Controls->Add(this->pictureBox101);
-			this->panelCart->Location = System::Drawing::Point(1273, 7);
+			this->panelCart->Location = System::Drawing::Point(1569, 42);
 			this->panelCart->Name = L"panelCart";
 			this->panelCart->Size = System::Drawing::Size(414, 820);
 			this->panelCart->TabIndex = 44;
@@ -1378,7 +1319,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->HOME->Controls->Add(this->pictureBox13);
 			this->HOME->Controls->Add(this->PBcaffeLatte);
 			this->HOME->Controls->Add(this->label7);
-			this->HOME->Location = System::Drawing::Point(489, 7);
+			this->HOME->Location = System::Drawing::Point(421, 1);
 			this->HOME->Name = L"HOME";
 			this->HOME->Size = System::Drawing::Size(414, 820);
 			this->HOME->TabIndex = 36;
@@ -2051,7 +1992,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->COFFEEFRAPPES->Controls->Add(this->pictureBox68);
 			this->COFFEEFRAPPES->Controls->Add(this->label29);
 			this->COFFEEFRAPPES->Controls->Add(this->pictureBox69);
-			this->COFFEEFRAPPES->Location = System::Drawing::Point(1730, 568);
+			this->COFFEEFRAPPES->Location = System::Drawing::Point(1322, 539);
 			this->COFFEEFRAPPES->Name = L"COFFEEFRAPPES";
 			this->COFFEEFRAPPES->Size = System::Drawing::Size(414, 820);
 			this->COFFEEFRAPPES->TabIndex = 42;
@@ -2063,7 +2004,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelmf->Controls->Add(this->pictureBox1);
 			this->panelmf->Controls->Add(this->panel1);
 			this->panelmf->Controls->Add(this->mfbtn);
-			this->panelmf->Location = System::Drawing::Point(1210, 35);
+			this->panelmf->Location = System::Drawing::Point(1426, 66);
 			this->panelmf->Name = L"panelmf";
 			this->panelmf->Size = System::Drawing::Size(436, 521);
 			this->panelmf->TabIndex = 55;
@@ -2132,7 +2073,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->PanelCap->Controls->Add(this->pictureBox17);
 			this->PanelCap->Controls->Add(this->panel12);
 			this->PanelCap->Controls->Add(this->cafelattebtn);
-			this->PanelCap->Location = System::Drawing::Point(916, 712);
+			this->PanelCap->Location = System::Drawing::Point(1329, 571);
 			this->PanelCap->Name = L"PanelCap";
 			this->PanelCap->Size = System::Drawing::Size(436, 521);
 			this->PanelCap->TabIndex = 56;
@@ -2202,7 +2143,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Panelcafelatte->Controls->Add(this->cap2);
 			this->Panelcafelatte->Controls->Add(this->des1);
 			this->Panelcafelatte->Controls->Add(this->capbtn);
-			this->Panelcafelatte->Location = System::Drawing::Point(1209, 35);
+			this->Panelcafelatte->Location = System::Drawing::Point(1425, 66);
 			this->Panelcafelatte->Name = L"Panelcafelatte";
 			this->Panelcafelatte->Size = System::Drawing::Size(437, 521);
 			this->Panelcafelatte->TabIndex = 54;
@@ -2293,7 +2234,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelOrder->Controls->Add(this->regular);
 			this->panelOrder->Controls->Add(this->label12);
 			this->panelOrder->Controls->Add(this->tbQuantity);
-			this->panelOrder->Location = System::Drawing::Point(1180, 35);
+			this->panelOrder->Location = System::Drawing::Point(1396, 66);
 			this->panelOrder->Name = L"panelOrder";
 			this->panelOrder->Size = System::Drawing::Size(483, 763);
 			this->panelOrder->TabIndex = 53;
@@ -2824,7 +2765,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->CMPanel->Controls->Add(this->panel11);
 			this->CMPanel->Controls->Add(this->pictureBox72);
 			this->CMPanel->Controls->Add(this->button2);
-			this->CMPanel->Location = System::Drawing::Point(1680, 12);
+			this->CMPanel->Location = System::Drawing::Point(1330, 364);
 			this->CMPanel->Name = L"CMPanel";
 			this->CMPanel->Size = System::Drawing::Size(436, 521);
 			this->CMPanel->TabIndex = 61;
@@ -2893,7 +2834,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->CPPanel->Controls->Add(this->pictureBox19);
 			this->CPPanel->Controls->Add(this->panel14);
 			this->CPPanel->Controls->Add(this->button3);
-			this->CPPanel->Location = System::Drawing::Point(1210, 36);
+			this->CPPanel->Location = System::Drawing::Point(1426, 67);
 			this->CPPanel->Name = L"CPPanel";
 			this->CPPanel->Size = System::Drawing::Size(436, 521);
 			this->CPPanel->TabIndex = 62;
@@ -2964,7 +2905,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->IMPanel->Controls->Add(this->pictureBox73);
 			this->IMPanel->Controls->Add(this->panel16);
 			this->IMPanel->Controls->Add(this->button4);
-			this->IMPanel->Location = System::Drawing::Point(913, 618);
+			this->IMPanel->Location = System::Drawing::Point(1358, 602);
 			this->IMPanel->Name = L"IMPanel";
 			this->IMPanel->Size = System::Drawing::Size(436, 521);
 			this->IMPanel->TabIndex = 63;
@@ -3055,7 +2996,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->panelCO->Controls->Add(this->button5);
 			this->panelCO->Controls->Add(this->pictureBox78);
 			this->panelCO->Controls->Add(this->pictureBox79);
-			this->panelCO->Location = System::Drawing::Point(1432, 13);
+			this->panelCO->Location = System::Drawing::Point(1314, 444);
 			this->panelCO->Name = L"panelCO";
 			this->panelCO->Size = System::Drawing::Size(436, 521);
 			this->panelCO->TabIndex = 64;
@@ -3149,7 +3090,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->PROFILE->Controls->Add(this->pictureBox87);
 			this->PROFILE->Controls->Add(this->pictureBox88);
 			this->PROFILE->Controls->Add(this->panel19);
-			this->PROFILE->Location = System::Drawing::Point(1794, 688);
+			this->PROFILE->Location = System::Drawing::Point(1325, 489);
 			this->PROFILE->Name = L"PROFILE";
 			this->PROFILE->Size = System::Drawing::Size(414, 820);
 			this->PROFILE->TabIndex = 65;
@@ -3382,7 +3323,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->PanelIA->Controls->Add(this->panel24);
 			this->PanelIA->Controls->Add(this->pictureBox89);
 			this->PanelIA->Controls->Add(this->button6);
-			this->PanelIA->Location = System::Drawing::Point(875, 36);
+			this->PanelIA->Location = System::Drawing::Point(1333, 226);
 			this->PanelIA->Name = L"PanelIA";
 			this->PanelIA->Size = System::Drawing::Size(436, 521);
 			this->PanelIA->TabIndex = 66;
@@ -3443,6 +3384,158 @@ private: System::ComponentModel::IContainer^ components;
 			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &Menus::button6_Click);
 			// 
+			// panel23
+			// 
+			this->panel23->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->panel23->Controls->Add(this->scoretxt);
+			this->panel23->Controls->Add(this->panel26);
+			this->panel23->Controls->Add(this->pictureBox105);
+			this->panel23->Controls->Add(this->label2);
+			this->panel23->Controls->Add(this->pictureBox107);
+			this->panel23->Controls->Add(this->pictureBox108);
+			this->panel23->Controls->Add(this->label4);
+			this->panel23->Controls->Add(this->pictureBox109);
+			this->panel23->Location = System::Drawing::Point(853, 21);
+			this->panel23->Name = L"panel23";
+			this->panel23->Size = System::Drawing::Size(455, 833);
+			this->panel23->TabIndex = 67;
+			// 
+			// scoretxt
+			// 
+			this->scoretxt->AutoSize = true;
+			this->scoretxt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->scoretxt->ForeColor = System::Drawing::Color::White;
+			this->scoretxt->Location = System::Drawing::Point(399, 116);
+			this->scoretxt->Name = L"scoretxt";
+			this->scoretxt->Size = System::Drawing::Size(18, 20);
+			this->scoretxt->TabIndex = 42;
+			this->scoretxt->Text = L"0";
+			// 
+			// panel26
+			// 
+			this->panel26->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel26.BackgroundImage")));
+			this->panel26->Controls->Add(this->pictureBox96);
+			this->panel26->Controls->Add(this->pictureBox99);
+			this->panel26->Controls->Add(this->pictureBox102);
+			this->panel26->Controls->Add(this->pictureBox103);
+			this->panel26->Controls->Add(this->pictureBox104);
+			this->panel26->Location = System::Drawing::Point(83, 732);
+			this->panel26->Name = L"panel26";
+			this->panel26->Size = System::Drawing::Size(287, 58);
+			this->panel26->TabIndex = 41;
+			// 
+			// pictureBox96
+			// 
+			this->pictureBox96->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox96->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox96.Image")));
+			this->pictureBox96->Location = System::Drawing::Point(171, 23);
+			this->pictureBox96->Name = L"pictureBox96";
+			this->pictureBox96->Size = System::Drawing::Size(32, 18);
+			this->pictureBox96->TabIndex = 34;
+			this->pictureBox96->TabStop = false;
+			// 
+			// pictureBox99
+			// 
+			this->pictureBox99->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox99->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox99.Image")));
+			this->pictureBox99->Location = System::Drawing::Point(84, 22);
+			this->pictureBox99->Name = L"pictureBox99";
+			this->pictureBox99->Size = System::Drawing::Size(25, 19);
+			this->pictureBox99->TabIndex = 33;
+			this->pictureBox99->TabStop = false;
+			// 
+			// pictureBox102
+			// 
+			this->pictureBox102->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox102->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox102.Image")));
+			this->pictureBox102->Location = System::Drawing::Point(41, 21);
+			this->pictureBox102->Name = L"pictureBox102";
+			this->pictureBox102->Size = System::Drawing::Size(28, 23);
+			this->pictureBox102->TabIndex = 27;
+			this->pictureBox102->TabStop = false;
+			// 
+			// pictureBox103
+			// 
+			this->pictureBox103->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox103->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox103.Image")));
+			this->pictureBox103->Location = System::Drawing::Point(226, 20);
+			this->pictureBox103->Name = L"pictureBox103";
+			this->pictureBox103->Size = System::Drawing::Size(20, 21);
+			this->pictureBox103->TabIndex = 7;
+			this->pictureBox103->TabStop = false;
+			// 
+			// pictureBox104
+			// 
+			this->pictureBox104->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox104->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox104.Image")));
+			this->pictureBox104->Location = System::Drawing::Point(126, 18);
+			this->pictureBox104->Name = L"pictureBox104";
+			this->pictureBox104->Size = System::Drawing::Size(26, 26);
+			this->pictureBox104->TabIndex = 5;
+			this->pictureBox104->TabStop = false;
+			// 
+			// pictureBox105
+			// 
+			this->pictureBox105->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox105.Image")));
+			this->pictureBox105->Location = System::Drawing::Point(37, 181);
+			this->pictureBox105->Name = L"pictureBox105";
+			this->pictureBox105->Size = System::Drawing::Size(383, 225);
+			this->pictureBox105->TabIndex = 40;
+			this->pictureBox105->TabStop = false;
+			this->pictureBox105->Click += gcnew System::EventHandler(this, &Menus::pictureBox105_Click);
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Calibri", 16, System::Drawing::FontStyle::Bold));
+			this->label2->ForeColor = System::Drawing::Color::White;
+			this->label2->Location = System::Drawing::Point(34, 108);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(75, 27);
+			this->label2->TabIndex = 39;
+			this->label2->Text = L"Games";
+			// 
+			// pictureBox107
+			// 
+			this->pictureBox107->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox107.Image")));
+			this->pictureBox107->Location = System::Drawing::Point(359, 113);
+			this->pictureBox107->Name = L"pictureBox107";
+			this->pictureBox107->Size = System::Drawing::Size(25, 27);
+			this->pictureBox107->TabIndex = 37;
+			this->pictureBox107->TabStop = false;
+			// 
+			// pictureBox108
+			// 
+			this->pictureBox108->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox108.Image")));
+			this->pictureBox108->Location = System::Drawing::Point(383, 45);
+			this->pictureBox108->Name = L"pictureBox108";
+			this->pictureBox108->Size = System::Drawing::Size(30, 25);
+			this->pictureBox108->TabIndex = 36;
+			this->pictureBox108->TabStop = false;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Calibri", 18, System::Drawing::FontStyle::Bold));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(239)), static_cast<System::Int32>(static_cast<System::Byte>(200)),
+				static_cast<System::Int32>(static_cast<System::Byte>(162)));
+			this->label4->Location = System::Drawing::Point(69, 43);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(72, 29);
+			this->label4->TabIndex = 35;
+			this->label4->Text = L"Menu";
+			// 
+			// pictureBox109
+			// 
+			this->pictureBox109->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox109.Image")));
+			this->pictureBox109->Location = System::Drawing::Point(39, 47);
+			this->pictureBox109->Name = L"pictureBox109";
+			this->pictureBox109->Size = System::Drawing::Size(24, 23);
+			this->pictureBox109->TabIndex = 34;
+			this->pictureBox109->TabStop = false;
+			// 
 			// Menus
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -3450,12 +3543,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->BackColor = System::Drawing::SystemColors::ActiveCaption;
 			this->ClientSize = System::Drawing::Size(1940, 1100);
 			this->ControlBox = false;
+			this->Controls->Add(this->panel23);
 			this->Controls->Add(this->PanelIA);
 			this->Controls->Add(this->PROFILE);
+			this->Controls->Add(this->panelCO);
 			this->Controls->Add(this->IMPanel);
 			this->Controls->Add(this->PanelCap);
 			this->Controls->Add(this->LOGINPANEL);
-			this->Controls->Add(this->panelCO);
 			this->Controls->Add(this->HOME);
 			this->Controls->Add(this->CPPanel);
 			this->Controls->Add(this->CMPanel);
@@ -3474,6 +3568,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Name = L"Menus";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Menus";
+			this->Load += gcnew System::EventHandler(this, &Menus::Menus_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->panelCart->ResumeLayout(false);
 			this->panelCart->PerformLayout();
@@ -3627,10 +3722,23 @@ private: System::ComponentModel::IContainer^ components;
 			this->panel24->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox86))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox89))->EndInit();
+			this->panel23->ResumeLayout(false);
+			this->panel23->PerformLayout();
+			this->panel26->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox96))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox99))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox102))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox103))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox104))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox105))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox107))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox108))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox109))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+
 
 
 
@@ -4134,6 +4242,34 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void pictureBox86_Click(System::Object^ sender, System::EventArgs^ e) {
 	showPanel(COLDDRINKS);
-;}
+
+}
+
+
+
+
+
+
+private: System::Void panel23_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	if (e->Button == System::Windows::Forms::MouseButtons::Left) {
+		gravity = 10;
+	}
+
+}
+private: System::Void panel23_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	if (e->Button == System::Windows::Forms::MouseButtons::Left) {
+		gravity = -10;
+	}
+
+}
+private: System::Void pictureBox105_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	Game^ flappy = gcnew Game();
+
+	flappy->Show();
+
+}
+private: System::Void Menus_Load(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

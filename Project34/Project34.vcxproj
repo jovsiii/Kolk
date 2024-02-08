@@ -133,17 +133,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2ndUI.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="newpanels.cpp" />
     <ClCompile Include="OnBoarding.cpp" />
     <ClCompile Include="Program.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="2ndUI.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Custom.h" />
     <ClInclude Include="Filehandling.h" />
+    <ClInclude Include="Game.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Menus.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -156,8 +156,8 @@
     <ClInclude Include="recieptManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="2ndUI.resx">
-      <DependentUpon>2ndUI.h</DependentUpon>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menus.resx">
       <DependentUpon>Menus.h</DependentUpon>

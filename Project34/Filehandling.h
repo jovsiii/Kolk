@@ -1,6 +1,6 @@
 #pragma once
 #include"Menus.h"
-#include"2ndUI.h"
+
 using namespace System;
 using namespace System::IO;
 using namespace System::Windows::Forms;
@@ -34,7 +34,7 @@ public:
                 array<String^>^ parts = line->Split(',');
                 //checks if the account exists in the file
                 if (parts->Length == 3 && parts[0]->Trim() == username && parts[1]->Trim() == password) {
-                   
+
                     loggedIn = true;
                     break;
 
@@ -71,13 +71,13 @@ public:
             String^ text = textBox->Text->Trim();
             if (String::IsNullOrEmpty(text) || String::IsNullOrWhiteSpace(text)) {
                 MessageBox::Show("Please fill in all the fields.");
-                return false; 
+                return false;
             }
         }
         //checks if the values are the same in the password and confirm passwor
         if (tbPassword->Text->Trim() != tbConfirm->Text->Trim()) {
             MessageBox::Show("Passwords do not match.");
-            return false; 
+            return false;
         }
         //checks if account exists
         try {
@@ -90,7 +90,7 @@ public:
 
                 //checks if an account exists
                 if (Accounts->Contains(newAccount)) {
-                //message box if account already exists
+                    //message box if account already exists
                     MessageBox::Show("Account already exists.");
                     return false;
                 }
@@ -106,12 +106,12 @@ public:
             file->Close();
             //message box for successul creation
             MessageBox::Show("Account created successfully!");
-            return true; 
+            return true;
         }
         //error message box for failed file handling
         catch (IOException^ ex) {
             MessageBox::Show("Error accessing the file: " + ex->Message);
-            return false; 
+            return false;
         }
     }
 };
