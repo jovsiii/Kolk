@@ -4263,12 +4263,22 @@ private: System::Void panel23_MouseDown(System::Object^ sender, System::Windows:
 
 }
 private: System::Void pictureBox105_Click(System::Object^ sender, System::EventArgs^ e) {
+	Random^ random = gcnew Random();
+	int randomScore = random->Next(1, 6); // Generates a random number between 1 and 5
+
+	// Parse the current score from scoretxt
+	int currentScore = 0;
+	if (Int32::TryParse(scoretxt->Text, currentScore)) {
+		// If parsing is successful, add the random value to the current score
+		int newScore = currentScore + randomScore;
+		scoretxt->Text = newScore.ToString(); // Convert the new score to string and update scoretxt
+	}
 
 	Game^ flappy = gcnew Game();
-
 	flappy->Show();
-
+	
 }
+
 private: System::Void Menus_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };

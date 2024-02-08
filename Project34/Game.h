@@ -20,11 +20,13 @@ namespace Project34 {
 		int pipeSpeed = 4;
 		int gravity = 5;
 		int score = 0;
+
+		SoundPlayer^ gameOver;
+
 		SoundPlayer^ startSoundPlayer;
+	private: System::Windows::Forms::Label^ label1;
+
 	private: System::Windows::Forms::Label^ scoreTxt;
-
-
-		   SoundPlayer^ gameOver;
 
 
 
@@ -33,6 +35,7 @@ namespace Project34 {
 		Game(void)
 		{
 			// Call the Play method to play the sound
+			gameOver = gcnew SoundPlayer(Path::Combine(Path::GetDirectoryName(Application::ExecutablePath), "GAMEOVER.wav"));
 			startSoundPlayer = gcnew SoundPlayer(Path::Combine(Path::GetDirectoryName(Application::ExecutablePath), "MUSIC.wav"));
 			startSoundPlayer->Play();
 			InitializeComponent();
@@ -86,6 +89,7 @@ namespace Project34 {
 			this->ground = (gcnew System::Windows::Forms::PictureBox());
 			this->gameTimer = (gcnew System::Windows::Forms::Timer(this->components));
 			this->scoreTxt = (gcnew System::Windows::Forms::Label());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pipeTop))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->flappyBird))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pipeGround))->BeginInit();
@@ -144,6 +148,7 @@ namespace Project34 {
 			// scoreTxt
 			// 
 			this->scoreTxt->AutoSize = true;
+			this->scoreTxt->BackColor = System::Drawing::Color::Transparent;
 			this->scoreTxt->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->scoreTxt->Location = System::Drawing::Point(12, 9);
@@ -152,18 +157,32 @@ namespace Project34 {
 			this->scoreTxt->TabIndex = 6;
 			this->scoreTxt->Text = L"Score: 0";
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->ForeColor = System::Drawing::Color::White;
+			this->label1->Location = System::Drawing::Point(21, 9);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(41, 13);
+			this->label1->TabIndex = 7;
+			this->label1->Text = L"Score: ";
+			// 
 			// Game
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::White;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(414, 893);
-			this->Controls->Add(this->scoreTxt);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->ground);
-			this->Controls->Add(this->pipeGround);
 			this->Controls->Add(this->flappyBird);
+			this->Controls->Add(this->pipeGround);
 			this->Controls->Add(this->pipeTop);
+			this->Controls->Add(this->scoreTxt);
+			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(42)), static_cast<System::Int32>(static_cast<System::Byte>(14)),
+				static_cast<System::Int32>(static_cast<System::Byte>(36)));
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"Game";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -186,7 +205,7 @@ namespace Project34 {
 		startSoundPlayer->Stop();
 		gameOver->Play();
 
-		scoreTxt->Text += "Game Over!!!!" + score;
+		label1->Text += "Game Over!!!!" + score;
 
 	}
 	private: System::Void Game_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -199,7 +218,7 @@ namespace Project34 {
 		flappyBird->Top += gravity;
 		pipeGround->Left -= pipeSpeed;
 		pipeTop->Left -= pipeSpeed;
-		scoreTxt->Text = "Score" + score;
+		label1->Text = "Score" + score;
 
 		if (pipeGround->Left < -50 || pipeTop->Left < -80) {
 			// Switch the roles of top and bottom pipes on each iteration
